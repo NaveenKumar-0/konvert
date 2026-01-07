@@ -1,5 +1,5 @@
 # konvert
-# 🚀 Konvert – File Conversion Web Application
+# Konvert – File Conversion Web Application
 
 **Konvert** is a secure web-based file conversion application that allows users to convert images into multiple formats and videos into MP3 audio. It includes authentication with email verification, conversion history tracking, and cloud storage integration.
 
