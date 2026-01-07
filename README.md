@@ -132,6 +132,7 @@ Stores conversion metadata.
 
 ## 📁 Project Structure
 
+```tree
 konvert_app/
 ├── core/
 │ ├── database.py
@@ -160,7 +161,7 @@ konvert_app/
 │ ├── js/
 └── requirements.txt
 └── main.py
-
+```
 ---
 
 ## ✅ Current Status
