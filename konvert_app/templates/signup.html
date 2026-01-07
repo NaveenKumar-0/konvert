@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>Sign Up</h3>
+
+<form id="signupForm">
+    <input type="email" id="email" placeholder="Email" required />
+
+    <input type="password" id="password" placeholder="Password" required />
+
+    <small>
+        8–14 chars, 1 uppercase, 1 number, 1 special (@#$)
+    </small>
+
+    <button type="submit">Create Account</button>
+</form>
+
+<p id="msg"></p>
+
+<a href="/login">Already have an account? Login</a>
+
+{% endblock %}

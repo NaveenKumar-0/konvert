@@ -1,0 +1,27 @@
+services:
+  db:
+    image: postgres:15
+    container_name: konvert-db
+    environment:
+      POSTGRES_DB: appdb
+      POSTGRES_USER: appuser
+      POSTGRES_PASSWORD: apppass
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  app:
+    build: .
+    container_name: konvert-app
+    environment:
+      BASE_URL: http://127.0.0.1:8000
+    env_file:
+      - ./konvert_app/.env
+    depends_on:
+      - db
+    ports:
+      - "8000:8000"
+
+volumes:
+  postgres_data:

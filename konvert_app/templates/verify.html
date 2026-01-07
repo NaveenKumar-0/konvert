@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Email Verification</title>
+</head>
+<body>
+  <h2>Verifying your email…</h2>
+
+  <script>
+    const token = "{{ token }}";
+
+    fetch("/auth/verify-email?token=" + token)
+      .then(res => res.json())
+      .then(() => {
+        document.body.innerHTML = `
+          <h2>✅ Your email has been verified</h2>
+          <p>You can now log in.</p>
+          <a href="/login">Go to Login</a>
+        `;
+      })
+      .catch(() => {
+        document.body.innerHTML = `<h2>❌ Verification failed</h2>`;
+      });
+  </script>
+</body>
+</html>

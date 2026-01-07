@@ -1,0 +1,235 @@
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f6f7fb;
+  color: #222;
+}
+
+/* ===== TOP BAR ===== */
+.topbar {
+  background: #fff3c4;
+  border-bottom: 1px solid #e2d48f;
+}
+
+.topbar-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.logo {
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logout-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  width: auto;
+  min-width: 90px;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+}
+
+/* ===== MAIN LAYOUT ===== */
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* ===== WELCOME ===== */
+.welcome-section {
+  margin-bottom: 40px;
+}
+
+.welcome-section h1 {
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  color: #555;
+}
+
+/* ===== ACTION CARDS ===== */
+.actions-section {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.card {
+  width: 320px;
+  padding: 35px 25px;
+  background: #f9fafc;
+  border-radius: 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #555;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  background: #ffffff;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+/* ===== HISTORY ===== */
+.history-section {
+  margin-top: 50px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.history-section h2 {
+  margin-top: 0;
+}
+
+#historyMsg {
+  color: #777;
+}
+
+/* ===== AUTH (login/signup – untouched for now) ===== */
+.auth-container {
+  width: 360px;
+  margin: 100px auto;
+  padding: 30px;
+  background: white;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.divider {
+  margin: 60px 40px;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.history {
+  margin-top: 40px;
+}
+
+.history h2 {
+  margin-bottom: 20px;
+}
+
+#historyTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#historyTable th,
+#historyTable td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+#historyTable th {
+  background: #fafafa;
+  font-weight: bold;
+}
+
+#historyTable a {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#historyTable a:hover {
+  text-decoration: underline;
+}
+
+.logo-icon {
+  font-size: 20px;
+}
+
+.success-box {
+  background: #eafaf1;
+  border: 1px solid #b7ebc6;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.success-box h3 {
+  margin-top: 0;
+  color: #1e8449;
+}
+
+.download-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.download-btn {
+  padding: 10px 16px;
+  border-radius: 6px;
+  background: #ecf0f1;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+.download-btn.primary {
+  background: #27ae60;
+  color: white;
+}
+
+.download-btn:hover {
+  opacity: 0.9;
+}

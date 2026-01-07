@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Konvert | Dashboard</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+
+  <script>
+    if (!localStorage.getItem("access_token")) {
+      window.location.href = "/";
+    }
+  </script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="logo">
+      <span class="logo-icon">🔁</span>
+      <span>Konvert</span>
+    </div>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="welcome-section">
+    <h1>Namastey 👋</h1>
+    <p class="subtitle">What would you like to convert today?</p>
+  </section>
+
+  <section class="actions-section">
+    <div class="cards">
+      <div class="card" onclick="goImage()">
+        <h2>🖼 Image Conversion</h2>
+        <p>PDF, PNG, JPG, GIF, WEBP, DOCX</p>
+      </div>
+
+      <div class="card" onclick="goVideo()">
+        <h2>🎬 Video to MP3</h2>
+        <p>Max 30 seconds</p>
+      </div>
+    </div>
+  </section>
+
+<hr class="divider">
+
+<section class="history">
+  <h2>Conversion History</h2>
+
+  <table id="historyTable">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Created</th>
+        <th>Original</th>
+        <th>Converted</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="4">Loading...</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+</main>
+
+<script src="/static/js/app.js"></script>
+
+<script>
+  function logout() {
+    localStorage.removeItem("access_token");
+    window.location.href = "/";
+  }
+
+  function goImage() {
+    window.location.href = "/image";
+  }
+
+  function goVideo() {
+    window.location.href = "/video";
+  }
+</script>
+
+<script>
+  loadHistory();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Konvert | Login</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<div class="auth-container">
+  <h1>Konvert</h1>
+
+  <!-- LOGIN -->
+  <h3>Login</h3>
+
+  <input type="email" id="login-email" placeholder="Email" />
+  <input type="password" id="login-password" placeholder="Password" />
+  <button onclick="login()">Login</button>
+
+  <button onclick="resendVerification()" style="margin-top:8px">
+    Resend Verification Email
+  </button>
+
+  <p>or</p>
+
+  <!-- SIGNUP -->
+  <h3>Sign Up</h3>
+
+  <input type="email" id="signup-email" placeholder="Email" />
+  <input type="password" id="signup-password" placeholder="Password" />
+  <small>8–14 chars, 1 uppercase, 1 number, 1 special (@#$)</small>
+
+  <button onclick="signup()">Sign Up</button>
+</div>
+
+<script src="/static/js/app.js"></script>
+</body>
+</html>

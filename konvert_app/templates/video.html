@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main class="container">
+
+  <section class="welcome-section">
+    <h1>🎬 Video → MP3</h1>
+    <p class="subtitle">Upload a video (max 30 seconds)</p>
+  </section>
+
+  <section class="actions-section">
+    <form id="videoForm">
+      <input type="file" id="videoFile" accept="video/*" required />
+      <button type="submit">Convert</button>
+    </form>
+
+    <div id="videoResult" style="margin-top:20px;"></div>
+  </section>
+
+</main>
+{% endblock %}
